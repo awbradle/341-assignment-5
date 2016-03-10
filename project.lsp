@@ -100,3 +100,18 @@
 		(T (f10 (cdr L) M))
 	)
 )
+
+(defun f11 (x)
+	(cond ((< x 2) nil)
+		(T (prime x x))
+	)
+)
+
+(defun prime (x y)
+	(cond ((< y 3) T)
+		((= (modulus x (- y 1)) 0) nil)
+		(T (prime x (- y 1)))
+	)
+)
+
+ 
